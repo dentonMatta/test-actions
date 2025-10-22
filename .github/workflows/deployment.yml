@@ -1,5 +1,5 @@
 name: Test & Deploy Project
-on: push
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
   
   # Second Job: Deploy
   deploy: 
-    needs: test
+    needs: [test]
     runs-on: ubuntu-latest       
     steps:
       # ie First step: download code from reository
