@@ -10,6 +10,9 @@ jobs:
                 uses: actions/setup-node@v3  
                 with:
                     node-version: '18'
+            -   name: Install dependencies
+                run: npm ci
+
             -   name: Install linter
                 run: npm init @eslint/config@latest -- --config eslint-config-xo
             -   name: Run linter
