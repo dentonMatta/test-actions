@@ -1,0 +1,12 @@
+name: Issue Workflow
+on: [issues]
+jobs:
+    Output_Issue_Info:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Output Issue Information
+                run: |
+                    echo "Issue: ${{ github }}"
+                    echo "Issue Title: ${{ github.event.issue.title }}"
+                    echo "Issue Body: ${{ github.event.issue.body }}"
+                    echo "Issue Creator: ${{ github.event.issue.user.login }}"

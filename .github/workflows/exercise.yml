@@ -15,7 +15,7 @@ jobs:
             -   name: Install linter 
                 run: npm i eslint              
             -   name: Initialize lint config 
-                run: npm init @eslint/config@latest -- --config eslint-config-xo
+                run: npm init @eslint/config@latest
             -   name: Run linter
                 run: npx eslint
 
